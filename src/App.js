@@ -48,8 +48,8 @@ function App() {
      </header>
 
      <div className='movie-container'>
-       {movies.map((movie) => 
-       <Movie  key ={movie.id} {...movie} />
+       {movies.filter(movie => movie.poster_path).map((movie) => 
+       <Movie  key ={movie.id} movie={movie} />
        )}
     </div>
     </>
